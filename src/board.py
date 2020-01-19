@@ -3,10 +3,11 @@ from PyQt5.QtWidgets import *
 
 
 class Board(QWidget):
-    def __init__(self, parent=None, puyo_width=16, puyo_height=16, vs=False,
-                 column=6, row=13):
+    def __init__(self, score, parent=None, puyo_width=16, puyo_height=16,
+                 column=6, row=13, vs=False):
         super(Board, self).__init__(parent)
 
+        self.score = score
         self.column = column
         self.row = row
         width = column * puyo_width + 50

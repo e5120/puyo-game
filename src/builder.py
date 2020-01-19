@@ -1,7 +1,10 @@
 from board import Board
+from score import Score
 
-def build_board(args, puyo_width=64, puyo_height=64):
-    return Board(puyo_width=puyo_width,
+
+def build_board(args, score, puyo_width=64, puyo_height=64):
+    return Board(score,
+                 puyo_width=puyo_width,
                  puyo_height=puyo_height,
                  vs=args.vs,
                  row=args.row,
@@ -9,7 +12,7 @@ def build_board(args, puyo_width=64, puyo_height=64):
 
 
 def build_score():
-    pass
+    return Score()
 
 
 def build_puyo():

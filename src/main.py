@@ -11,7 +11,8 @@ import opts
 
 def main(args):
     app = QApplication(sys.argv)
-    main_window = build_board(args,
+    score = build_score()
+    main_window = build_board(args, score,
                               puyo_width=64,
                               puyo_height=64)
     main_window.show()
